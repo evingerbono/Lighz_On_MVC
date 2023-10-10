@@ -17,6 +17,9 @@ class LampaElem{
         txt += `<div class="lampa" id=${index}><p></p></div>`;
         this.szuloElem.append(txt);
     }
+    setSzin(){
+        this.pElem.css("background-color","blue");
+    }
     #esemenyTrigger(esemenyNev){
         const esemeny = new CustomEvent(esemenyNev, { detail: this.#index });
         window.dispatchEvent(esemeny);

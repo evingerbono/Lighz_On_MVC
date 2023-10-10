@@ -10,16 +10,16 @@ class Model{
         }
     }
     setSzin(id){
-        $(`#${id}`).css("background-color","red");
+        $(`#${id}`).css("background-color","blue");
     }
 
     setSzomszed(id){
         this.#lista[id]=true;
-        console.log(this.#lista);
+        //console.log(this.#lista);
         for (let index = 0; index <= this.#lista.length; index++) {
             if (this.#lista[index]!==true) {
-                $(`#${id+1}`).css("background-color","blue");
-                $(`#${id-1}`).css("background-color","blue");
+                $(`#${id+1}`).css("background-color","red");
+                $(`#${id-1}`).css("background-color","red");
             }
         }
     }
