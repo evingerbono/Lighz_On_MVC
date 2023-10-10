@@ -8,7 +8,7 @@ class LampaElem{
         this.elem = $(".lampa:last-child");
         this.pElem = this.elem.children("p:last-child");
         this.elem.on("click", () => {
-                this.#esemenyTrigger("kivalaszt");
+                this.#esemenyTrigger("kapcs");
         });
     }
 
@@ -17,12 +17,8 @@ class LampaElem{
         txt += `<div class="lampa" id=${index}><p></p></div>`;
         this.szuloElem.append(txt);
     }
-
-    setSzin(szin){
-        this.pElem.html(szin);
-    }
     #esemenyTrigger(esemenyNev){
-        const esemeny = new CustomEvent(esemenyNev, { detail: this });
+        const esemeny = new CustomEvent(esemenyNev, { detail: this.#index });
         window.dispatchEvent(esemeny);
     }
 }

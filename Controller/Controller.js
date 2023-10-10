@@ -2,7 +2,12 @@ import Lampak from "../View/LampakView.js";
 import Model from "../Model/Model.js";
 class Controller{
     constructor(){
-        this.Lampak=new Lampak();
+        this.LAMPAK=new Lampak();
+        this.MODEL=new Model();
+        $(window).on("kapcs", (event) => {
+            console.log(event.detail);
+            this.MODEL.setSzin(event.detail);
+        }); 
     }
 }
 export default Controller;
