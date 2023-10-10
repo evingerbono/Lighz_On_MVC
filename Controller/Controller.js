@@ -2,8 +2,9 @@ import Lampak from "../View/LampakView.js";
 import Model from "../Model/Model.js";
 class Controller{
     constructor(){
-        this.LAMPAK=new Lampak();
-        this.MODEL=new Model();
+        let meret=9;
+        this.LAMPAK=new Lampak(meret);
+        this.MODEL=new Model(meret);
         $(window).on("kapcs", (event) => {
             console.log(event.detail);
             this.MODEL.setSzin(event.detail);

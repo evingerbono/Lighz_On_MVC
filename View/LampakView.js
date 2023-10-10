@@ -1,7 +1,7 @@
 import LampaElem from "./LampaElemView.js";
 class Lampak {
-    constructor() {
-        for (let index = 1; index <= 9; index++) {
+    constructor(n) {
+        for (let index = 1; index <= n; index++) {
             this.LAMPA = new LampaElem($(".jatekM"), index);
         } 
     }

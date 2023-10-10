@@ -3,9 +3,9 @@ class Model{
     #lista=[];
     #allapot;
 
-    constructor(){
+    constructor(n){
         this.#allapot=false;
-        for (let index = 1; index <= 9; index++) {
+        for (let index = 1; index <= n; index++) {
             this.#lista.push(this.#allapot);
         }
     }
@@ -16,7 +16,7 @@ class Model{
     setSzomszed(id){
         this.#lista[id]=true;
         console.log(this.#lista);
-        for (let index = 0; index <= 9; index++) {
+        for (let index = 0; index <= this.#lista.length; index++) {
             if (this.#lista[index]!==true) {
                 $(`#${id+1}`).css("background-color","blue");
                 $(`#${id-1}`).css("background-color","blue");
