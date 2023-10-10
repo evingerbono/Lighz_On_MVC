@@ -7,6 +7,7 @@ class Controller{
         $(window).on("kapcs", (event) => {
             console.log(event.detail);
             this.MODEL.setSzin(event.detail);
+            this.MODEL.setSzomszed(event.detail);
         }); 
     }
 }

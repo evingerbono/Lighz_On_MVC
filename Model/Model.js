@@ -11,6 +11,9 @@ class Model{
     }
     setSzin(id){
         $(`#${id}`).css("background-color","red");
+    }
+
+    setSzomszed(id){
         this.#lista[id]=true;
         console.log(this.#lista);
         for (let index = 0; index <= 9; index++) {
